@@ -52,7 +52,7 @@
 							"userProperties": [
 								{
 									"name": "source",
-									"value": "@{item().schema}.@{item().tabla}"
+									"value": "@{item().schema1}.@{item().tabla}"
 								},
 								{
 									"name": "destination",
