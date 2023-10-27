@@ -1,0 +1,33 @@
+{
+	"name": "AzureSqlTable2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"URL_Key_Vault": {
+				"type": "string"
+			},
+			"Schema2": {
+				"type": "string"
+			},
+			"Table1": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().Schema2",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().Table1",
+				"type": "Expression"
+			}
+		}
+	}
+}
