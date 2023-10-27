@@ -51,32 +51,53 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
+								"source": {
+									"type": "AzureSqlSource",
+									"queryTimeout": "02:00:00",
+									"partitionOption": "None"
+								},
 								"enableStaging": false
-							}
+							},
+							"inputs": [
+								{
+									"referenceName": "AzureSqlTable1",
+									"type": "DatasetReference",
+									"parameters": {
+										"URL_Key_Vault": {
+											"value": "https://kv-store.vault.azure.net/",
+											"type": "Expression"
+										},
+										"Schema1": {
+											"value": "@item().Schema1",
+											"type": "Expression"
+										}
+									}
+								}
+							]
 						}
 					]
 				}
 			}
 		],
 		"parameters": {
-			"Esquema1": {
-				"type": "array",
-				"defaultValue": [
-					"finance"
-				]
+			"Schema1": {
+				"type": "string",
+				"defaultValue": "finance"
 			},
-			"Esquema2": {
-				"type": "array",
-				"defaultValue": [
-					"dbo"
-				]
+			"Schema2": {
+				"type": "string",
+				"defaultValue": "dbo"
 			}
 		},
 		"variables": {
 			"Table": {
 				"type": "Array",
 				"defaultValue": [
-					"[\"LogisticsAddressCountryRegionStaging¨,\"PaymTermInvoiceStaging\",\"UFTProjInvoiceJourStaging\",\"aqs_canton\",\"aqs_cliente\"]"
+					"LogisticsAddressCountryRegionStaging",
+					"PaymTermInvoiceStaging",
+					"UFTProjInvoiceJourStaging",
+					"aqs_canton",
+					"aqs_cliente"
 				]
 			}
 		},
