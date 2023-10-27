@@ -68,11 +68,11 @@
 											"type": "Expression"
 										},
 										"schema1": {
-											"value": "@item().Schema1",
+											"value": "@item().schema1",
 											"type": "Expression"
 										},
 										"table": {
-											"value": "@item().Table",
+											"value": "@item().table",
 											"type": "Expression"
 										}
 									}
