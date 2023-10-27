@@ -67,8 +67,12 @@
 											"value": "https://kv-store.vault.azure.net/",
 											"type": "Expression"
 										},
-										"Schema1": {
+										"schema1": {
 											"value": "@item().Schema1",
+											"type": "Expression"
+										},
+										"table": {
+											"value": "@item().Table",
 											"type": "Expression"
 										}
 									}
