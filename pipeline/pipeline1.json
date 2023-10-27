@@ -120,7 +120,7 @@
 			}
 		],
 		"parameters": {
-			"Schema1": {
+			"Schema": {
 				"type": "string",
 				"defaultValue": "finance"
 			},
