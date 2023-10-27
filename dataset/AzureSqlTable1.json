@@ -9,10 +9,10 @@
 			"URL_Key_Vault": {
 				"type": "string"
 			},
-			"Schema1": {
+			"schema1": {
 				"type": "string"
 			},
-			"Table": {
+			"table": {
 				"type": "string"
 			}
 		},
