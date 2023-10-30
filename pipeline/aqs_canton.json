@@ -14,7 +14,7 @@
 				"typeProperties": {
 					"variableName": "tabla",
 					"value": {
-						"value": "@json('[\n{\n       \"schema\": \"dbo\",    \n        \"schema2\": \"hud\",     \n        \"tabla\":\"aqs_cliente\" ,   \n        \"pk_integracion\": \"IdClienteCrm\"\n        },\n        ]')",
+						"value": "@json('[\n{\n       \"schema\": \"dbo\",    \n        \"schema2\": \"hud\",     \n        \"tabla\":\"aqs_canton\" ,   \n        \"pk_integracion\": \"Codigo\"\n        },\n        ]')\n\n      ",
 						"type": "Expression"
 					}
 				}
@@ -62,7 +62,7 @@
 									"upsertSettings": {
 										"useTempDB": true,
 										"keys": [
-											"IdClienteCrm"
+											"Codigo"
 										]
 									},
 									"sqlWriterUseTableLock": false,
@@ -129,7 +129,7 @@
 			"tabla": {
 				"type": "Array",
 				"defaultValue": [
-					"aqs_cliente"
+					"aqs_canton"
 				]
 			}
 		},
