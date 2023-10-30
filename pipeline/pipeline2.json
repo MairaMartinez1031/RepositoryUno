@@ -1,0 +1,43 @@
+{
+	"name": "pipeline2",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "tabla",
+					"value": {
+						"value": "@json('[\n{\n       \"schema\": \"finance\",    \n        \"schema2\": \"dbo\",     \n        \"tabla\":\"aqs_cliente\" ,   \n        \"pk_integracion\": \"IdClienteCrm\"\n        },\n        ]')",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Set variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": []
+			}
+		],
+		"variables": {
+			"tabla": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
