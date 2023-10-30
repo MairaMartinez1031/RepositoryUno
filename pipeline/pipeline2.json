@@ -56,7 +56,7 @@
 				}
 			},
 			{
-				"name": "Execute Pipeline1_copy3",
+				"name": "aqs_cliente",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
@@ -68,6 +68,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "aqs_cliente",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			},
