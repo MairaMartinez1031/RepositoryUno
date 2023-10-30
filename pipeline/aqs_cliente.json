@@ -14,7 +14,7 @@
 				"typeProperties": {
 					"variableName": "tabla",
 					"value": {
-						"value": "@json('[\n{\n       \"schema\": \"dbo\",    \n        \"schema2\": \"hud\",     \n        \"tabla\":\"aqs_cliente\" ,   \n        \"pk_integracion\": \"IdClienteCrm\"\n        },\n        ]')",
+						"value": "@json('[\n{\n       \"schema\": \"dbo\",    \n        \"schema2\": \"dbf\",     \n        \"tabla\":\"aqs_cliente\" ,   \n        \"pk_integracion\": \"IdClienteCrm\"\n        },\n        ]')",
 						"type": "Expression"
 					}
 				}
