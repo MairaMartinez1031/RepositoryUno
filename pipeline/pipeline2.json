@@ -16,11 +16,11 @@
 				}
 			},
 			{
-				"name": "Execute Pipeline1_copy1",
+				"name": "UFTProjInvoiceJourStaging",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "Execute Pipeline1_copy2",
+						"activity": "PaymTermInvoiceStaging",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -28,11 +28,15 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "UFTProjInvoiceJourStaging",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			},
 			{
-				"name": "Execute Pipeline1_copy2",
+				"name": "PaymTermInvoiceStaging",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
@@ -44,6 +48,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PaymTermInvoiceStaging",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			},
@@ -52,7 +60,7 @@
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "Execute Pipeline1_copy4",
+						"activity": "aqs_canton",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -64,11 +72,11 @@
 				}
 			},
 			{
-				"name": "Execute Pipeline1_copy4",
+				"name": "aqs_canton",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "Execute Pipeline1_copy1",
+						"activity": "UFTProjInvoiceJourStaging",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -76,6 +84,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "aqs_canton",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			}
