@@ -76,8 +76,14 @@
 						"parameters": {
 							"schema": "prb",
 							"tabla": "update",
-							"urlKeyVault": "https://kv-store.vault.azure.net/",
-							"secretNameKeyVault": "DatabaseConnectioncourseuno"
+							"urlKeyVault": {
+								"value": "https://kv-store.vault.azure.net/",
+								"type": "Expression"
+							},
+							"secretNameKeyVault": {
+								"value": "DatabaseConnectioncourseuno",
+								"type": "Expression"
+							}
 						}
 					}
 				]
