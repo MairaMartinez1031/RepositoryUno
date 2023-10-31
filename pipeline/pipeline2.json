@@ -122,17 +122,6 @@
 									"type": "String",
 									"physicalType": "String"
 								}
-							},
-							{
-								"source": {
-									"name": "columnaprueba",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Column7",
-									"type": "String",
-									"physicalType": "String"
-								}
 							}
 						],
 						"typeConversion": true,
