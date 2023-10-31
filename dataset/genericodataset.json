@@ -1,20 +1,6 @@
 {
 	"name": "genericodataset",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "AzureSqlDatabase1",
-			"type": "LinkedServiceReference",
-			"parameters": {
-				"url_key_vault": {
-					"value": "@dataset().urlKeyVault",
-					"type": "Expression"
-				},
-				"secret_name": {
-					"value": "@dataset().secretNameKeyVault",
-					"type": "Expression"
-				}
-			}
-		},
 		"parameters": {
 			"schema": {
 				"type": "string"
