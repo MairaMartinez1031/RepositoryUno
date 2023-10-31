@@ -71,13 +71,13 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "generydataset",
+						"referenceName": "genericodataset",
 						"type": "DatasetReference",
 						"parameters": {
 							"schema": "prb",
 							"tabla": "update",
-							"url_key_vault": "https://kv-store.vault.azure.net/",
-							"secret_name": "DatabaseConnectioncourseuno"
+							"urlKeyVault": "https://kv-store.vault.azure.net/",
+							"secretNameKeyVault": "DatabaseConnectioncourseuno"
 						}
 					}
 				]
