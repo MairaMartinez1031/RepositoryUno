@@ -1,0 +1,21 @@
+{
+	"name": "Excel1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "JOB",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Creacción de JOBS.xlsx",
+				"container": "ejercicio3"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": []
+	}
+}
