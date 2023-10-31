@@ -74,8 +74,8 @@
 						"referenceName": "genericodataset",
 						"type": "DatasetReference",
 						"parameters": {
-							"schema": "prb",
-							"tabla": "update",
+							"schema": "dfp",
+							"tabla": "Borrar",
 							"urlKeyVault": {
 								"value": "https://kv-store.vault.azure.net/",
 								"type": "Expression"
