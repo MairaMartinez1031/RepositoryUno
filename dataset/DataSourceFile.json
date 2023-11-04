@@ -22,15 +22,15 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": {
-					"value": "@{dataset().nombrearchivo}",
+					"value": "@dataset().nombrearchivo",
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@{dataset().directorio}",
+					"value": "@dataset().directorio",
 					"type": "Expression"
 				},
 				"container": {
-					"value": "@{dataset().contenedor}",
+					"value": "@dataset().contenedor",
 					"type": "Expression"
 				}
 			}
