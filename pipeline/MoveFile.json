@@ -214,13 +214,15 @@
 		],
 		"parameters": {
 			"SourceStore_Location": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "ejercicio4"
 			},
 			"SourceStore_Directory": {
 				"type": "string"
 			},
 			"DestinationStore_Location": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "ejercicio3"
 			},
 			"DestinationStore_Directory": {
 				"type": "string"
