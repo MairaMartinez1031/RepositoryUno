@@ -138,7 +138,21 @@
 							"outputs": [
 								{
 									"referenceName": "DataSourceDestination",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"contenedor": {
+											"value": "@pipeline().parameters.DestinationStore_Location",
+											"type": "Expression"
+										},
+										"directorio": {
+											"value": "@pipeline().parameters.DestinationStore_Directory",
+											"type": "Expression"
+										},
+										"nombrearchivo": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						},
@@ -162,7 +176,36 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"enableLogging": true
+								"dataset": {
+									"referenceName": "DataSourceFile",
+									"type": "DatasetReference",
+									"parameters": {
+										"contenedor": {
+											"value": "@pipeline().parameters.SourceStore_Location",
+											"type": "Expression"
+										},
+										"directorio": {
+											"value": "@pipeline().parameters.SourceStore_Directory",
+											"type": "Expression"
+										},
+										"nombrearchivo": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
+								},
+								"logStorageSettings": {
+									"linkedServiceName": {
+										"referenceName": "AzureBlobStorage1",
+										"type": "LinkedServiceReference"
+									}
+								},
+								"enableLogging": true,
+								"storeSettings": {
+									"type": "AzureBlobStorageReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								}
 							}
 						}
 					]
