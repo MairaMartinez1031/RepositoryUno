@@ -21,8 +21,18 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "Creacción de JOBS.xlsb",
-				"container": "ejercicio2"
+				"fileName": {
+					"value": "@{dataset().nombrearchivo}",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@{dataset().directorio}",
+					"type": "Expression"
+				},
+				"container": {
+					"value": "@{dataset().contenedor}",
+					"type": "Expression"
+				}
 			}
 		}
 	}
