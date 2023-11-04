@@ -24,6 +24,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -144,6 +145,20 @@
 				}
 			}
 		],
+		"parameters": {
+			"SourceStore_Location": {
+				"type": "string"
+			},
+			"SourceStore_Directory": {
+				"type": "string"
+			},
+			"DestinationStore_Location": {
+				"type": "string"
+			},
+			"DestinationStore_Directory": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
