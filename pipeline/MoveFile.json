@@ -56,11 +56,11 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('GetFileList').output.exists",
+						"value": "@activity('GetFileList').output.childItems",
 						"type": "Expression"
 					},
 					"condition": {
-						"value": "@equals(item().type,'File')",
+						"value": "@equals(item().name,'xlsb')",
 						"type": "Expression"
 					}
 				}
